@@ -14,8 +14,8 @@ mongoose.connect(
     console.log(err);
 });
 
-app.use("/api/cart", cartRoute);
+app.use("/", cartRoute);
 
-app.listen(process.env.PORT ||  5000, () => {
+app.listen(process.env.PORT, () => {
     console.log("Backend server");
 });
