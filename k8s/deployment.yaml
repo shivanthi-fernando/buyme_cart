@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: buyme-cart-k8s
+spec:
+  selector:
+    matchLabels:
+      app: buyme-cart-k8s
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: buyme-cart-k8s
+    spec:
+      containers:
+        - name: buyme-cart-k8s
+          image: shivanthifernando19971103/cart_image:latest
+          ports:
+            - containerPort: 4003
