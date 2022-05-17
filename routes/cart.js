@@ -3,7 +3,7 @@ const { checkToken } = require('../middleware/auth/tokenvalidation')
 const { GetProductDetailsEvent } = require("../middleware/events/events");
 const router = require("express").Router();
 
-//Create Cart
+//Create Cart 
 router.post("/add-cart-item", checkToken, async (req, res) => {
 
     try {
